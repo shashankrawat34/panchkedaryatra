@@ -1,0 +1,39 @@
+{
+  "name": "panch-kedar-yatra",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "prebuild": "node scripts/fix-permissions.js",
+    "build": "npm run prebuild && vite build",
+    "preview": "vite preview",
+    "optimize-images": "node scripts/optimize-images.js",
+    "postinstall": "node scripts/fix-permissions.js"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "framer-motion": "^11.15.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet-async": "^2.0.5",
+    "react-icons": "^5.4.0",
+    "react-router-dom": "^7.13.0",
+    "swiper": "^11.1.15"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^3.4.16",
+    "vite": "^6.0.3",
+    "vite-plugin-compression": "^0.5.1"
+  }
+}

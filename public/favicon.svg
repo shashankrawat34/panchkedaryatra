@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Dark green background circle -->
+  <circle cx="50" cy="50" r="50" fill="#1a2e2a"/>
+  
+  <!-- Five peaks representing Panch Kedar temples -->
+  <g transform="translate(50, 60)">
+    <!-- Peak 1 (far left) -->
+    <polygon points="-32,-22 -24,0 -16,-22" fill="#ffbf00"/>
+    
+    <!-- Peak 2 (left-center) -->
+    <polygon points="-16,-30 -8,0 0,-30" fill="#ffbf00"/>
+    
+    <!-- Peak 3 (center - tallest) -->
+    <polygon points="0,-38 10,0 -10,-38" fill="#ffbf00"/>
+    
+    <!-- Peak 4 (right-center) -->
+    <polygon points="16,-30 24,0 32,-30" fill="#ffbf00"/>
+    
+    <!-- Peak 5 (far right) -->
+    <polygon points="24,-22 32,0 40,-22" fill="#ffbf00"/>
+  </g>
+</svg>

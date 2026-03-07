@@ -1,0 +1,259 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #1a2e2a;
+    color: #ffbf00;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-16 md:py-20 px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-title {
+    @apply font-heading text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-primary-950 mb-4 leading-tight;
+  }
+
+  .section-subtitle {
+    @apply text-gray-700 text-base md:text-lg max-w-2xl mx-auto leading-relaxed;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-accent-500 hover:bg-accent-600 text-primary-950 font-semibold 
+           py-3 px-8 rounded-xl transition-all duration-300 hover:shadow-lg
+           focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2;
+    will-change: transform, box-shadow;
+    transform: translateZ(0);
+  }
+
+  .btn-primary:hover {
+    transform: scale(1.05) translateZ(0);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold 
+           py-3 px-8 rounded-xl transition-all duration-300 hover:bg-white hover:text-primary-950
+           focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2;
+    will-change: transform, box-shadow;
+    transform: translateZ(0);
+  }
+
+  .btn-secondary:hover {
+    transform: scale(1.05) translateZ(0);
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-card overflow-hidden transition-all duration-300 
+           hover:shadow-card-hover hover:-translate-y-1;
+    will-change: transform, box-shadow;
+    transform: translateZ(0);
+  }
+
+  .gradient-overlay {
+    @apply absolute inset-0 bg-gradient-to-b from-primary-900/70 via-primary-800/50 to-primary-950/80;
+  }
+}
+
+/* Swiper custom styles */
+.swiper-pagination-bullet {
+  background-color: #1a2e2a !important;
+  opacity: 0.4 !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  background-color: #ffbf00 !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f8f9fa;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a2e2a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2a444b;
+}
+
+/* Parallax helper */
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .parallax-bg {
+    background-attachment: scroll;
+  }
+}
+
+/* Gallery masonry */
+.gallery-masonry {
+  columns: 2;
+  column-gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .gallery-masonry {
+    columns: 3;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-masonry {
+    columns: 4;
+  }
+}
+
+.gallery-masonry .gallery-item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+
+/* Loader */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a2e2a;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.page-loader.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Blog ticker */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-wrap {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-content {
+  display: inline-block;
+  animation: ticker 30s linear infinite;
+}
+
+.ticker-content:hover {
+  animation-play-state: paused;
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+  @apply fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm;
+}
+
+/* ─── Interactive Color Grading ─── */
+
+/* Category-specific gallery hover overlays */
+.gallery-grade-kedarnath .gallery-item:hover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(7,89,133,0.35), rgba(12,74,110,0.25));
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.gallery-grade-tungnath .gallery-item:hover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(6,95,70,0.35), rgba(4,120,87,0.25));
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.gallery-grade-rudranath .gallery-item:hover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(107,33,168,0.35), rgba(88,28,135,0.25));
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.gallery-grade-madmaheshwar .gallery-item:hover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(180,83,9,0.35), rgba(146,64,14,0.25));
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.gallery-grade-kalpeshwar .gallery-item:hover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(175,48,28,0.35), rgba(120,41,29,0.25));
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Per-item category color badge glow */
+.gallery-item[data-category="Kedarnath"] { --cat-color: #0ca5eb; --cat-glow: rgba(12,165,235,0.2); }
+.gallery-item[data-category="Tungnath"] { --cat-color: #10b981; --cat-glow: rgba(16,185,129,0.2); }
+.gallery-item[data-category="Rudranath"] { --cat-color: #a855f7; --cat-glow: rgba(168,85,247,0.2); }
+.gallery-item[data-category="Madmaheshwar"] { --cat-color: #f59e0b; --cat-glow: rgba(245,158,11,0.2); }
+.gallery-item[data-category="Kalpeshwar"] { --cat-color: #e45843; --cat-glow: rgba(228,88,67,0.2); }
+
+.gallery-item:hover {
+  box-shadow: 0 8px 30px var(--cat-glow, rgba(0,0,0,0.15));
+}
+
+/* Color-graded section transitions */
+.section-grade-transition {
+  transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+/* Trek accent bar for package cards */
+.trek-accent-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .trek-accent-bar {
+  opacity: 1;
+}

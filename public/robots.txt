@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://panchkedaryatra.in/sitemap.xml
