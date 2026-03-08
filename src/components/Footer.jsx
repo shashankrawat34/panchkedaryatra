@@ -20,6 +20,7 @@ const footerLinks = {
   ],
   'Resources': [
     { name: 'Blog', to: '/blog' },
+    { name: 'Live Updates', to: '/updates' },
     { name: 'Packing Guide', to: '/blog' },
     { name: 'Best Season', to: '/blog' },
     { name: 'Fitness Tips', to: '/blog' },
