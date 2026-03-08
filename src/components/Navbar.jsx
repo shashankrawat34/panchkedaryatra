@@ -11,6 +11,7 @@ const navLinks = [
   { name: 'Gallery', to: '/gallery' },
   { name: 'Testimonials', to: '/testimonials' },
   { name: 'Blog', to: '/blog' },
+  { name: 'Updates', to: '/updates' },
   { name: 'Contact', to: '/contact' },
 ];
 

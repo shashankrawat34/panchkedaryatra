@@ -14,6 +14,7 @@ const TestimonialsPage = lazy(() => import('./pages/TestimonialsPage'));
 const BlogPage = lazy(() => import('./pages/BlogPage'));
 const BlogDetailPage = lazy(() => import('./pages/BlogDetailPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
+const UpdatesPage = lazy(() => import('./pages/UpdatesPage'));
 
 function PageFallback() {
   return (
@@ -74,6 +75,7 @@ export default function App() {
                 <Route path="/blog" element={<BlogPage />} />
                 <Route path="/blog/:slug" element={<BlogDetailPage />} />
                 <Route path="/contact" element={<ContactPage />} />
+                <Route path="/updates" element={<UpdatesPage />} />
                 <Route path="*" element={<NotFound />} />
               </Route>
             </Routes>
