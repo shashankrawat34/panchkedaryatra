@@ -122,7 +122,7 @@ export default function TestimonialsPage() {
                     <span className="text-white font-bold text-2xl">{t.initials}</span>
                   </div>
                   <StarRating rating={t.rating} />
-                  <p className="text-lg md:text-xl text-gray-600 italic mt-4 mb-6 max-w-2xl mx-auto leading-relaxed">
+                  <p className="text-lg md:text-xl text-primary-800 italic mt-4 mb-6 max-w-2xl mx-auto leading-relaxed">
                     "{t.text}"
                   </p>
                   <h4 className="text-xl font-display font-bold text-primary-900">{t.name}</h4>
@@ -154,11 +154,11 @@ export default function TestimonialsPage() {
                   </div>
                   <div>
                     <h4 className="font-bold text-primary-900">{t.name}</h4>
-                    <p className="text-sm text-gray-500">{t.role}</p>
+                    <p className="text-sm text-primary-600">{t.role}</p>
                   </div>
                 </div>
                 <StarRating rating={t.rating} />
-                <p className="text-gray-600 mt-3 text-sm leading-relaxed">"{t.text}"</p>
+                <p className="text-primary-700 mt-3 text-sm leading-relaxed">"{t.text}"</p>
               </div>
             ))}
           </div>

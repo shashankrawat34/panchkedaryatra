@@ -8,8 +8,8 @@ const packages = [
     slug: 'kedarnath-yatra',
     title: 'Kedarnath Yatra',
     image: '/images/kedarnath/kedarnath-1.jpg',
-    duration: '5 Days / 4 Nights',
-    price: '₹25,000',
+    duration: '4 Days / 3 Nights',
+    price: '₹10,499',
     priceNote: 'per person',
     location: 'Kedarnath, Uttarakhand',
     highlights: [
@@ -19,7 +19,7 @@ const packages = [
       'All meals included',
       'Rudraprayag & Gaurikund visits',
     ],
-    description: 'Visit the most revered of the Panch Kedars – the majestic Kedarnath Temple at 3,583m.',
+    description: 'Visit the most revered of the Panch Kedars – the majestic Kedarnath Temple at 3,563m.',
     badge: 'Most Popular',
     badgeColor: 'bg-accent-500',
   },
@@ -29,17 +29,17 @@ const packages = [
     title: 'Tungnath-Chandrashila Trek',
     image: '/images/tungnath/tungnath-1.jpg',
     duration: '4 Days / 3 Nights',
-    price: '₹18,000',
+    price: '₹4,499',
     priceNote: 'per person',
     location: 'Chopta, Uttarakhand',
     highlights: [
       'World\'s highest Shiva temple',
-      'Chandrashila summit (4,000m)',
+      'Chandrashila summit (3,656m)',
       'Panoramic Himalayan views',
       'Camp under the stars',
       'Beginner-friendly trail',
     ],
-    description: 'Reach Tungnath, the highest Shiva temple in the world at 3,680m.',
+    description: 'Reach Tungnath, the highest Shiva temple in the world at 3,489m.',
     badge: 'Best Value',
     badgeColor: 'bg-green-500',
   },
@@ -48,8 +48,8 @@ const packages = [
     slug: 'rudranath-trek',
     title: 'Rudranath Trek',
     image: '/images/rudranath/rudra-1.png',
-    duration: '7 Days / 6 Nights',
-    price: '₹32,000',
+    duration: '5 Days / 4 Nights',
+    price: '₹10,499',
     priceNote: 'per person',
     location: 'Gopeshwar, Uttarakhand',
     highlights: [
@@ -59,7 +59,7 @@ const packages = [
       'Rich wildlife spotting',
       'Offbeat & uncrowded trails',
     ],
-    description: 'Trek to the remote Rudranath temple at 3,600m through stunning alpine meadows.',
+    description: 'Trek to the remote Rudranath temple at 3,549m through stunning alpine meadows.',
     badge: null,
     badgeColor: '',
   },
@@ -68,8 +68,8 @@ const packages = [
     slug: 'madmaheshwar-trek',
     title: 'Madmaheshwar Trek',
     image: '/images/madhyamaheshwar/madhya-1.jpg',
-    duration: '6 Days / 5 Nights',
-    price: '₹28,000',
+    duration: '4 Days / 3 Nights',
+    price: '₹9,499',
     priceNote: 'per person',
     location: 'Ukhimath, Uttarakhand',
     highlights: [
@@ -79,17 +79,17 @@ const packages = [
       'Bantoli & Ransi villages',
       'Cultural immersion experience',
     ],
-    description: 'Journey to Madmaheshwar at 3,497m, where Lord Shiva\'s navel is worshipped.',
+    description: 'Journey to Madmaheshwar at 3,239m, where Lord Shiva\'s navel is worshipped.',
     badge: null,
     badgeColor: '',
   },
   {
     id: 5,
-    slug: 'kalpeshwar-temple-visit',
-    title: 'Kalpeshwar Temple Visit',
+    slug: 'rudranath-kalpeshwar-temple-visit',
+    title: 'Rudranath & Kalpeshwar Temple Visit',
     image: '/images/kalpeshwar/kalpeshwar.jpg',
-    duration: '3 Days / 2 Nights',
-    price: '₹12,000',
+    duration: '5 Days / 4 Nights',
+    price: '₹12,499',
     priceNote: 'per person',
     location: 'Urgam Valley, Uttarakhand',
     highlights: [
@@ -105,11 +105,11 @@ const packages = [
   },
   {
     id: 6,
-    slug: 'complete-panch-kedar-circuit',
-    title: 'Complete Panch Kedar Circuit',
+    slug: 'complete-panch-kedar-circuit-with-badrinath',
+    title: 'Complete Panch Kedar Circuit with Badrinath',
     image: '/images/kedarnath/kedarnath-3.jpg',
-    duration: '14 Days / 13 Nights',
-    price: '₹75,000',
+    duration: '12 Days / 11 Nights',
+    price: '₹38,999',
     priceNote: 'per person',
     location: 'All 5 Kedars, Uttarakhand',
     highlights: [
@@ -129,7 +129,7 @@ const packages = [
     title: 'Kedarnath + Tungnath Combo',
     image: '/images/tungnath/tungnath-2.jpg',
     duration: '8 Days / 7 Nights',
-    price: '₹40,000',
+    price: '₹14,000',
     priceNote: 'per person',
     location: 'Kedarnath & Chopta',
     highlights: [
@@ -148,8 +148,8 @@ const packages = [
     slug: 'rudranath-madmaheshwar-trek',
     title: 'Rudranath + Madmaheshwar Trek',
     image: '/images/rudranath/rudra-2.png',
-    duration: '10 Days / 9 Nights',
-    price: '₹52,000',
+    duration: '9 Days / 8 Nights',
+    price: '₹19,999',
     priceNote: 'per person',
     location: 'Gopeshwar & Ukhimath',
     highlights: [
@@ -171,8 +171,8 @@ const trekAccentColors = {
   'tungnath-chandrashila-trek': 'bg-tungnath-500',
   'rudranath-trek': 'bg-rudranath-500',
   'madmaheshwar-trek': 'bg-madmaheshwar-500',
-  'kalpeshwar-temple-visit': 'bg-kalpeshwar-500',
-  'complete-panch-kedar-circuit': 'bg-gradient-to-r from-kedarnath-500 via-tungnath-500 to-rudranath-500',
+  'rudranath-kalpeshwar-temple-visit': 'bg-kalpeshwar-500',
+  'complete-panch-kedar-circuit-with-badrinath': 'bg-gradient-to-r from-kedarnath-500 via-tungnath-500 to-rudranath-500',
   'kedarnath-tungnath-combo': 'bg-gradient-to-r from-kedarnath-500 to-tungnath-500',
   'rudranath-madmaheshwar-trek': 'bg-gradient-to-r from-rudranath-500 to-madmaheshwar-500',
 };
@@ -224,7 +224,7 @@ export default function Packages() {
                 </div>
               </div>
               <div className="p-5">
-                <div className="flex items-center gap-3 mb-2 text-xs text-gray-400">
+                <div className="flex items-center gap-3 mb-2 text-xs text-primary-600">
                   <span className="flex items-center gap-1">
                     <FiClock className="w-3.5 h-3.5" /> {pkg.duration}
                   </span>
@@ -237,7 +237,7 @@ export default function Packages() {
                 </h3>
                 <ul className="space-y-1 mb-4">
                   {pkg.highlights.slice(0, 3).map((item) => (
-                    <li key={item} className="flex items-center gap-1.5 text-gray-500 text-xs">
+                    <li key={item} className="flex items-center gap-1.5 text-primary-700 text-xs">
                       <FiCheck className="w-3.5 h-3.5 text-green-500 flex-shrink-0" />
                       {item}
                     </li>

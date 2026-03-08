@@ -84,7 +84,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-heading font-semibold text-primary-800 text-sm mb-1">Our Office</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">
+                  <p className="text-primary-700 text-sm leading-relaxed">
                     809, 8th Floor, Infinity Greens<br />
                     Dehradun, Uttarakhand 248001, India
                   </p>
@@ -97,11 +97,11 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-heading font-semibold text-primary-800 text-sm mb-1">Call Us</h3>
-                  <a href="tel:+917455062107" className="text-gray-500 text-sm hover:text-accent-500 transition-colors">
+                  <a href="tel:+917455062107" className="text-primary-700 text-sm hover:text-accent-600 transition-colors">
                     +91-74550 62107
                   </a>
                   <br />
-                  <a href="tel:+917455062107" className="text-gray-500 text-sm hover:text-accent-500 transition-colors">
+                  <a href="tel:+917455062107" className="text-primary-700 text-sm hover:text-accent-600 transition-colors">
                     +91-74550 62107
                   </a>
                 </div>
@@ -113,12 +113,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-heading font-semibold text-primary-800 text-sm mb-1">Email Us</h3>
-                  <a href="mailto:info@panchkedaryatra.in" className="text-gray-500 text-sm hover:text-accent-500 transition-colors">
+                  <a href="mailto:info@panchkedaryatra.in" className="text-primary-700 text-sm hover:text-accent-600 transition-colors">
                     info@panchkedaryatra.in
-                  </a>
-                  <br />
-                  <a href="mailto:bookings@panchkedaryatra.in" className="text-gray-500 text-sm hover:text-accent-500 transition-colors">
-                    bookings@panchkedaryatra.in
                   </a>
                 </div>
               </div>
@@ -154,7 +150,7 @@ export default function Contact() {
               <form onSubmit={handleSubmit} noValidate>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
                   <div>
-                    <label htmlFor="name" className="text-sm font-medium text-gray-700 block mb-1.5">
+                    <label htmlFor="name" className="text-sm font-medium text-primary-800 block mb-1.5">
                       Full Name *
                     </label>
                     <input
@@ -175,7 +171,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="text-sm font-medium text-gray-700 block mb-1.5">
+                    <label htmlFor="email" className="text-sm font-medium text-primary-800 block mb-1.5">
                       Email Address *
                     </label>
                     <input
@@ -196,7 +192,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="text-sm font-medium text-gray-700 block mb-1.5">
+                    <label htmlFor="phone" className="text-sm font-medium text-primary-800 block mb-1.5">
                       Phone Number *
                     </label>
                     <input
@@ -217,7 +213,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="package" className="text-sm font-medium text-gray-700 block mb-1.5">
+                    <label htmlFor="package" className="text-sm font-medium text-primary-800 block mb-1.5">
                       Select Package
                     </label>
                     <select
@@ -237,7 +233,7 @@ export default function Contact() {
                 </div>
 
                 <div className="mb-5">
-                  <label htmlFor="message" className="text-sm font-medium text-gray-700 block mb-1.5">
+                  <label htmlFor="message" className="text-sm font-medium text-primary-800 block mb-1.5">
                     Your Message *
                   </label>
                   <textarea

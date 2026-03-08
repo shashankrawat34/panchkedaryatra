@@ -7,25 +7,38 @@ import SEO from '../components/SEO';
 import { toWebP } from '../utils/image';
 
 const galleryImages = [
-  // Kedarnath (6)
-  { src: '/images/kedarnath/kedarnath-1.jpg', alt: 'Kedarnath Temple with snow-capped peaks in the background', category: 'Kedarnath', tall: true },
+  // Kedarnath (14)
   { src: '/images/kedarnath/kedarnath-3.jpg', alt: 'Aerial view of the trail leading to Kedarnath shrine', category: 'Kedarnath', tall: false },
   { src: '/images/kedarnath/kedarnath-4.jpg', alt: 'Pilgrims making their way through misty mountain passes near Kedarnath', category: 'Kedarnath', tall: false },
   { src: '/images/kedarnath/kedarnath-5.jpg', alt: 'Golden hour light illuminating Kedarnath valley', category: 'Kedarnath', tall: true },
   { src: '/images/kedarnath/kedarnath-6.jpg', alt: 'Kedarnath temple architecture and carvings up close', category: 'Kedarnath', tall: false },
   { src: '/images/kedarnath/kedarnath-7.jpg', alt: 'Snow-covered landscape around Kedarnath during early season', category: 'Kedarnath', tall: false },
+  { src: '/images/kedarnath/kedarnath-gallery-1.webp', alt: 'Kedarnath Temple against the majestic Himalayan backdrop', category: 'Kedarnath', tall: true },
+  { src: '/images/kedarnath/kedarnath-gallery-2.webp', alt: 'Pilgrims trekking the sacred path to Kedarnath', category: 'Kedarnath', tall: false },
+  { src: '/images/kedarnath/kedarnath-gallery-3.webp', alt: 'Scenic mountain views along the Kedarnath trek route', category: 'Kedarnath', tall: false },
+  { src: '/images/kedarnath/kedarnath-gallery-4.webp', alt: 'Kedarnath valley bathed in morning light', category: 'Kedarnath', tall: true },
+  { src: '/images/kedarnath/kedarnath-gallery-5.webp', alt: 'Misty trails and lush greenery on the way to Kedarnath', category: 'Kedarnath', tall: false },
+  { src: '/images/kedarnath/kedarnath-gallery-6.webp', alt: 'Kedarnath Temple during evening aarti with mountain backdrop', category: 'Kedarnath', tall: false },
+  { src: '/images/kedarnath/kedarnath-gallery-7.webp', alt: 'Snow-clad peaks surrounding the Kedarnath shrine', category: 'Kedarnath', tall: true },
+  { src: '/images/kedarnath/kedarnath-gallery-8.webp', alt: 'Panoramic view of the Kedarnath valley and Mandakini river', category: 'Kedarnath', tall: false },
+  { src: '/images/kedarnath/kedarnath-gallery-9.webp', alt: 'Do Dhaam yatra — Kedarnath and Badrinath pilgrimage trail', category: 'Kedarnath', tall: true },
 
-  // Tungnath (8)
+  // Tungnath (14)
   { src: '/images/tungnath/tungnath-1.jpg', alt: 'Sunrise over the Chopta meadows leading to Tungnath', category: 'Tungnath', tall: false },
   { src: '/images/tungnath/tungnath-2.jpg', alt: 'Majestic Himalayan mountain range at dawn from Tungnath trail', category: 'Tungnath', tall: true },
-  { src: '/images/tungnath/tungnath-3.jpg', alt: 'Panoramic views along the Tungnath-Chandrashila ridge', category: 'Tungnath', tall: false },
   { src: '/images/tungnath/tungnath-5.jpg', alt: 'Lush green Chopta meadows with Tungnath temple in distance', category: 'Tungnath', tall: true },
-  { src: '/images/tungnath/tungnath-8.jpg', alt: 'Tungnath temple — highest Shiva temple in the world at 3,680m', category: 'Tungnath', tall: false },
+  { src: '/images/tungnath/tungnath-8.jpg', alt: 'Tungnath temple — highest Shiva temple in the world at 3,489m', category: 'Tungnath', tall: false },
   { src: '/images/tungnath/tungnath-doli.jpg', alt: 'Traditional doli procession carrying deity from Tungnath temple', category: 'Tungnath', tall: false },
   { src: '/images/tungnath/tungnath-drone-1.jpg', alt: 'Aerial drone view of the Tungnath trek ridge and valley', category: 'Tungnath', tall: true },
   { src: '/images/tungnath/tungnath-drone-2.jpg', alt: 'Bird\'s-eye drone view of Tungnath temple amidst the clouds', category: 'Tungnath', tall: false },
+  { src: '/images/tungnath/tungnath-gallery-1.webp', alt: 'Chopta meadows with snow-capped peaks in the background', category: 'Tungnath', tall: true },
+  { src: '/images/tungnath/tungnath-gallery-2.webp', alt: 'Trekkers on the Chopta-Tungnath trail through rhododendron forests', category: 'Tungnath', tall: false },
+  { src: '/images/tungnath/tungnath-gallery-3.webp', alt: 'Chandrashila summit panorama at sunrise', category: 'Tungnath', tall: false },
+  { src: '/images/tungnath/tungnath-gallery-4.webp', alt: 'Snow-covered Tungnath temple in early season', category: 'Tungnath', tall: true },
+  { src: '/images/tungnath/tungnath-gallery-5.webp', alt: 'Rolling green meadows along the Chopta-Tungnath route', category: 'Tungnath', tall: false },
+  { src: '/images/tungnath/tungnath-gallery-6.webp', alt: 'Himalayan peaks viewed from the Tungnath-Chandrashila ridge', category: 'Tungnath', tall: false },
 
-  // Rudranath (7)
+  // Rudranath (16)
   { src: '/images/rudranath/rudra-1.png', alt: 'Alpine meadows on the Rudranath trek route', category: 'Rudranath', tall: false },
   { src: '/images/rudranath/rudra-2.png', alt: 'Foggy morning trek through rhododendron forests to Rudranath', category: 'Rudranath', tall: true },
   { src: '/images/rudranath/rudranath-3.jpg', alt: 'Ancient Rudranath cave temple nestled in the mountains', category: 'Rudranath', tall: false },
@@ -33,8 +46,17 @@ const galleryImages = [
   { src: '/images/rudranath/rudra-8.jpg', alt: 'Vast alpine bugyals and wildflowers near Rudranath', category: 'Rudranath', tall: true },
   { src: '/images/rudranath/rudra-9.png', alt: 'Steep rocky ascent along the Rudranath trek', category: 'Rudranath', tall: false },
   { src: '/images/rudranath/rudra-10.jpg', alt: 'Sunset glow over the Rudranath mountain peaks', category: 'Rudranath', tall: false },
+  { src: '/images/rudranath/rudra-gallery-1.webp', alt: 'Rudranath Temple surrounded by pristine Himalayan landscape', category: 'Rudranath', tall: true },
+  { src: '/images/rudranath/rudra-gallery-2.webp', alt: 'Lyuti Bugyal meadows on the way to Rudranath', category: 'Rudranath', tall: false },
+  { src: '/images/rudranath/rudra-gallery-3.webp', alt: 'Panaar Bugyal alpine grasslands near Rudranath', category: 'Rudranath', tall: false },
+  { src: '/images/rudranath/rudra-gallery-4.webp', alt: 'Oak and rhododendron forest trail to Rudranath', category: 'Rudranath', tall: true },
+  { src: '/images/rudranath/rudra-gallery-5.webp', alt: 'Pitradhar ridge views on the Rudranath trek', category: 'Rudranath', tall: false },
+  { src: '/images/rudranath/rudra-gallery-6.webp', alt: 'Misty mountains and sacred trails near Rudranath', category: 'Rudranath', tall: false },
+  { src: '/images/rudranath/rudra-gallery-7.webp', alt: 'Trekkers at camp with Himalayan peaks behind Rudranath', category: 'Rudranath', tall: true },
+  { src: '/images/rudranath/rudra-gallery-8.webp', alt: 'Sunrise over the Garhwal range from Rudranath trail', category: 'Rudranath', tall: false },
+  { src: '/images/rudranath/rudra-gallery-9.webp', alt: 'Dramatic cloud formations over the Rudranath valley', category: 'Rudranath', tall: false },
 
-  // Madmaheshwar (9)
+  // Madmaheshwar (16)
   { src: '/images/madhyamaheshwar/madhya-1.jpg', alt: 'Chaukhamba peaks viewed from Madmaheshwar trek', category: 'Madmaheshwar', tall: true },
   { src: '/images/madhyamaheshwar/madhya-2.png', alt: 'Lush forests and river valley on the Madmaheshwar trail', category: 'Madmaheshwar', tall: false },
   { src: '/images/madhyamaheshwar/madhya-3.jpg', alt: 'Serene lake reflecting mountain peaks near Madmaheshwar', category: 'Madmaheshwar', tall: false },
@@ -44,10 +66,30 @@ const galleryImages = [
   { src: '/images/madhyamaheshwar/madhya-7.jpg', alt: 'Traditional Garhwali village houses along the Madmaheshwar route', category: 'Madmaheshwar', tall: true },
   { src: '/images/madhyamaheshwar/madhya-10.jpg', alt: 'Dramatic cloud formations over Madmaheshwar valley', category: 'Madmaheshwar', tall: false },
   { src: '/images/madhyamaheshwar/madhya-11.jpg', alt: 'Trekkers resting at a high camp near Madmaheshwar', category: 'Madmaheshwar', tall: false },
+  { src: '/images/madhyamaheshwar/madhya-gallery-1.webp', alt: 'Madhyamaheshwar Temple nestled in the Garhwal Himalayas', category: 'Madmaheshwar', tall: true },
+  { src: '/images/madhyamaheshwar/madhya-gallery-2.webp', alt: 'Trek route through dense forests to Madhyamaheshwar', category: 'Madmaheshwar', tall: false },
+  { src: '/images/madhyamaheshwar/madhya-gallery-3.webp', alt: 'Alpine meadows and wildflowers near Madhyamaheshwar', category: 'Madmaheshwar', tall: false },
+  { src: '/images/madhyamaheshwar/madhya-gallery-4.webp', alt: 'Panoramic mountain views from Madhyamaheshwar campsite', category: 'Madmaheshwar', tall: true },
+  { src: '/images/madhyamaheshwar/madhya-gallery-5.webp', alt: 'Bhuda Madhyamaheshwar meadow with Himalayan backdrop', category: 'Madmaheshwar', tall: false },
+  { src: '/images/madhyamaheshwar/madhya-gallery-6.webp', alt: 'Sunrise over the peaks surrounding Madhyamaheshwar', category: 'Madmaheshwar', tall: false },
+  { src: '/images/madhyamaheshwar/madhya-gallery-7.webp', alt: 'Sacred Madhyamaheshwar Temple during evening prayers', category: 'Madmaheshwar', tall: true },
 
   // Kalpeshwar (2)
   { src: '/images/kalpeshwar/kalpeshwar.jpg', alt: 'Urgam Valley near Kalpeshwar temple', category: 'Kalpeshwar', tall: false },
   { src: '/images/kalpeshwar/kalp-4.png', alt: 'Ancient rock-cut Kalpeshwar temple in the Urgam Valley', category: 'Kalpeshwar', tall: true },
+
+  // Panch Kedar (11)
+  { src: '/images/panch-kedar/panch-kedar-1.webp', alt: 'Panoramic view of the Panch Kedar Himalayan landscape', category: 'Panch Kedar', tall: true },
+  { src: '/images/panch-kedar/panch-kedar-2.webp', alt: 'Sacred Panch Kedar pilgrimage trail through the mountains', category: 'Panch Kedar', tall: false },
+  { src: '/images/panch-kedar/panch-kedar-3.webp', alt: 'Misty mountain peaks along the Panch Kedar circuit', category: 'Panch Kedar', tall: false },
+  { src: '/images/panch-kedar/panch-kedar-4.webp', alt: 'Trekkers on the sacred Panch Kedar yatra route', category: 'Panch Kedar', tall: true },
+  { src: '/images/panch-kedar/panch-kedar-5.webp', alt: 'Lush green valleys on the Panch Kedar trek', category: 'Panch Kedar', tall: false },
+  { src: '/images/panch-kedar/panch-kedar-6.webp', alt: 'Snow-capped Himalayan peaks from the Panch Kedar trail', category: 'Panch Kedar', tall: false },
+  { src: '/images/panch-kedar/panch-kedar-7.webp', alt: 'Alpine meadows and wildflowers on the Panch Kedar circuit', category: 'Panch Kedar', tall: true },
+  { src: '/images/panch-kedar/panch-kedar-8.webp', alt: 'Ancient temple architecture along the Panch Kedar yatra', category: 'Panch Kedar', tall: false },
+  { src: '/images/panch-kedar/panch-kedar-9.webp', alt: 'Sunrise over the Garhwal Himalayas on Panch Kedar trek', category: 'Panch Kedar', tall: false },
+  { src: '/images/panch-kedar/panch-kedar-10.webp', alt: 'River valleys and forests along the Panch Kedar route', category: 'Panch Kedar', tall: true },
+  { src: '/images/panch-kedar/panch-kedar-11.webp', alt: 'Dramatic cloud formations over the Panch Kedar mountains', category: 'Panch Kedar', tall: false },
 ];
 
 const categories = ['All', ...new Set(galleryImages.map((i) => i.category))];
@@ -60,6 +102,7 @@ const categoryColors = {
   Rudranath: { active: 'bg-rudranath-700 text-white shadow-md shadow-rudranath-200', hover: 'hover:bg-rudranath-100 hover:text-rudranath-800', overlay: 'bg-rudranath-800/50', accent: '#a855f7' },
   Madmaheshwar: { active: 'bg-madmaheshwar-700 text-white shadow-md shadow-madmaheshwar-200', hover: 'hover:bg-madmaheshwar-100 hover:text-madmaheshwar-800', overlay: 'bg-madmaheshwar-800/50', accent: '#f59e0b' },
   Kalpeshwar: { active: 'bg-kalpeshwar-700 text-white shadow-md shadow-kalpeshwar-200', hover: 'hover:bg-kalpeshwar-100 hover:text-kalpeshwar-800', overlay: 'bg-kalpeshwar-800/50', accent: '#e45843' },
+  'Panch Kedar': { active: 'bg-primary-800 text-white shadow-md shadow-primary-200', hover: 'hover:bg-primary-100 hover:text-primary-800', overlay: 'bg-primary-900/50', accent: '#1a2e2a' },
 };
 
 // Per-item overlay color based on category
@@ -69,6 +112,7 @@ const itemOverlayColor = {
   Rudranath: 'group-hover:bg-rudranath-900/60',
   Madmaheshwar: 'group-hover:bg-madmaheshwar-900/65',
   Kalpeshwar: 'group-hover:bg-kalpeshwar-900/65',
+  'Panch Kedar': 'group-hover:bg-primary-900/60',
 };
 
 export default function GalleryPage() {
@@ -112,7 +156,7 @@ export default function GalleryPage() {
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                     filter === cat
                       ? colors.active
-                      : `bg-gray-100 text-gray-600 ${colors.hover}`
+                      : `bg-primary-100 text-primary-700 ${colors.hover}`
                   }`}
                 >
                   {cat}

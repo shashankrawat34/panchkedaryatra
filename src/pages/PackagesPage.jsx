@@ -10,7 +10,7 @@ export default function PackagesPage() {
     <>
       <SEO
         title="Trekking & Pilgrimage Packages"
-        description="Explore our curated Panch Kedar Yatra packages – Kedarnath, Tungnath, Rudranath, Madmaheshwar & Kalpeshwar treks. Prices from ₹12,000. Expert guides, all-inclusive."
+        description="Explore our curated Panch Kedar Yatra packages – Kedarnath, Tungnath, Rudranath, Madmaheshwar & Kalpeshwar treks. Prices from ₹4,499. Expert guides, all-inclusive."
         canonical="/packages"
         image="/images/kedarnath/kedarnath-4.webp"
       />
@@ -25,7 +25,7 @@ export default function PackagesPage() {
         <div className="max-w-7xl mx-auto">
           {/* Filter hint */}
           <div className="flex flex-wrap items-center gap-3 mb-10" data-aos="fade-up">
-            <span className="text-gray-500 text-sm font-medium">Showing:</span>
+            <span className="text-primary-600 text-sm font-medium">Showing:</span>
             <span className="bg-primary-50 text-primary-800 text-sm font-semibold px-4 py-1.5 rounded-full">
               All {packages.length} Packages
             </span>
@@ -58,7 +58,7 @@ export default function PackagesPage() {
                   </div>
                 </div>
                 <div className="p-5">
-                  <div className="flex items-center gap-3 mb-2 text-xs text-gray-400">
+                  <div className="flex items-center gap-3 mb-2 text-xs text-primary-600">
                     <span className="flex items-center gap-1">
                       <FiClock className="w-3.5 h-3.5" /> {pkg.duration}
                     </span>
@@ -71,7 +71,7 @@ export default function PackagesPage() {
                   </h3>
                   <ul className="space-y-1 mb-4">
                     {pkg.highlights.slice(0, 3).map((item) => (
-                      <li key={item} className="flex items-center gap-1.5 text-gray-500 text-xs">
+                      <li key={item} className="flex items-center gap-1.5 text-primary-700 text-xs">
                         <FiCheck className="w-3.5 h-3.5 text-green-500 flex-shrink-0" />
                         {item}
                       </li>

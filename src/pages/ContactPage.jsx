@@ -14,7 +14,7 @@ const contactInfo = [
 const faqs = [
   {
     q: 'What is the best time to visit the Panch Kedar temples?',
-    a: 'The ideal trekking season is May\u2013June and September\u2013October. Temples open in late April and close by November. Monsoon months (July\u2013August) carry landslide and leech risks and are best avoided. Kalpeshwar is the only Panch Kedar accessible year-round due to its lower altitude (2,200 m).',
+    a: 'The ideal trekking season is May\u2013June and September\u2013October. Temples open in late April and close by November. Monsoon months (July\u2013August) carry landslide and leech risks and are best avoided. Kalpeshwar is the only Panch Kedar accessible year-round due to its lower altitude (2,092 m).',
   },
   {
     q: 'How physically fit do I need to be for these treks?',
@@ -105,7 +105,7 @@ export default function ContactPage() {
                 </div>
                 <h4 className="font-bold text-primary-900 mb-2">{item.title}</h4>
                 {item.lines.map((l, j) => (
-                  <p key={j} className="text-sm text-gray-600">{l}</p>
+                  <p key={j} className="text-sm text-primary-700">{l}</p>
                 ))}
               </div>
             ))}
@@ -115,7 +115,7 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-2 gap-12">
             <div data-aos="fade-right">
               <h2 className="text-3xl font-display font-bold text-primary-900 mb-2">Send Us a Message</h2>
-              <p className="text-gray-600 mb-8">Fill out the form below and we'll get back to you within 24 hours.</p>
+              <p className="text-primary-700 mb-8">Fill out the form below and we'll get back to you within 24 hours.</p>
 
               {submitted ? (
                 <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
@@ -190,7 +190,7 @@ export default function ContactPage() {
                   </div>
                   <button
                     type="submit"
-                    className="inline-flex items-center gap-2 bg-accent-500 text-white px-8 py-3 rounded-full hover:bg-accent-600 transition-colors font-medium shadow-lg hover:shadow-xl"
+                    className="inline-flex items-center gap-2 bg-primary-800 text-white px-8 py-3 rounded-full hover:bg-primary-700 transition-colors font-medium shadow-lg hover:shadow-xl"
                   >
                     <FiSend /> Send Message
                   </button>
@@ -201,7 +201,7 @@ export default function ContactPage() {
             {/* Map */}
             <div data-aos="fade-left">
               <h2 className="text-3xl font-display font-bold text-primary-900 mb-2">Find Us</h2>
-              <p className="text-gray-600 mb-8">Visit our office in the heart of the Garhwal Himalayas.</p>
+              <p className="text-primary-700 mb-8">Visit our office in the heart of the Garhwal Himalayas.</p>
               <div className="rounded-xl overflow-hidden shadow-card h-96">
                 <iframe
                   title="Panch Kedar Yatra Office"
@@ -231,7 +231,7 @@ export default function ContactPage() {
                       href={s.href}
                       target="_blank"
                       rel="noreferrer"
-                      className={`w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 ${s.color} hover:text-white transition-all`}
+                      className={`w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center text-primary-700 ${s.color} hover:text-white transition-all`}
                     >
                       <s.icon />
                     </a>
@@ -277,7 +277,7 @@ function FaqItem({ question, answer, index }) {
         <FiChevronDown className={`w-5 h-5 text-accent-500 flex-shrink-0 transition-transform duration-300 ${open ? 'rotate-180' : ''}`} />
       </button>
       {open && (
-        <div className="px-5 pb-5 text-gray-600 leading-relaxed text-sm">
+        <div className="px-5 pb-5 text-primary-700 leading-relaxed text-sm">
           {answer}
         </div>
       )}

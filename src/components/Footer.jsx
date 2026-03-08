@@ -15,8 +15,8 @@ const footerLinks = {
     { name: 'Tungnath Trek', to: '/packages/tungnath-chandrashila-trek' },
     { name: 'Rudranath Trek', to: '/packages/rudranath-trek' },
     { name: 'Madmaheshwar Trek', to: '/packages/madmaheshwar-trek' },
-    { name: 'Kalpeshwar Visit', to: '/packages/kalpeshwar-temple-visit' },
-    { name: 'Full Panch Kedar', to: '/packages/complete-panch-kedar-circuit' },
+    { name: 'Rudranath & Kalpeshwar', to: '/packages/rudranath-kalpeshwar-temple-visit' },
+    { name: 'Full Panch Kedar', to: '/packages/complete-panch-kedar-circuit-with-badrinath' },
   ],
   'Resources': [
     { name: 'Blog', to: '/blog' },
@@ -43,7 +43,7 @@ export default function Footer() {
               <h3 className="font-heading text-2xl md:text-3xl font-bold text-white mb-2">
                 Ready for Your Sacred Journey?
               </h3>
-              <p className="text-white/60 text-sm md:text-base">
+              <p className="text-white/80 text-sm md:text-base">
                 Book your Panch Kedar Yatra today and experience the divine Himalayas.
               </p>
             </div>

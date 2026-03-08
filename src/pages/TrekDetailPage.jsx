@@ -3,7 +3,8 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   FiClock, FiMapPin, FiCheck, FiX, FiArrowLeft, FiChevronLeft, FiChevronRight,
-  FiStar, FiTrendingUp, FiUsers, FiSun, FiSend, FiZoomIn,
+  FiStar, FiTrendingUp, FiUsers, FiSun, FiSend, FiZoomIn, FiChevronDown,
+  FiHelpCircle, FiCalendar,
 } from 'react-icons/fi';
 import { FaWhatsapp, FaMountain } from 'react-icons/fa';
 import { getPackageBySlug, packages } from '../data/packages';
@@ -18,8 +19,8 @@ const trekGradients = {
   'tungnath-chandrashila-trek': 'from-primary-950/90 via-tungnath-900/45 to-transparent',
   'rudranath-trek': 'from-primary-950/90 via-rudranath-900/45 to-transparent',
   'madmaheshwar-trek': 'from-primary-950/90 via-madmaheshwar-900/45 to-transparent',
-  'kalpeshwar-temple-visit': 'from-primary-950/90 via-kalpeshwar-900/45 to-transparent',
-  'complete-panch-kedar-circuit': 'from-primary-950/90 via-primary-900/45 to-transparent',
+  'rudranath-kalpeshwar-temple-visit': 'from-primary-950/90 via-kalpeshwar-900/45 to-transparent',
+  'complete-panch-kedar-circuit-with-badrinath': 'from-primary-950/90 via-primary-900/45 to-transparent',
   'kedarnath-tungnath-combo': 'from-primary-950/90 via-kedarnath-800/40 to-transparent',
   'rudranath-madmaheshwar-trek': 'from-primary-950/90 via-rudranath-800/40 to-transparent',
 };
@@ -131,6 +132,37 @@ function ImageGallery({ images, title }) {
   );
 }
 
+function FaqAccordion({ question, answer }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className={`border rounded-xl overflow-hidden transition-colors duration-200 ${open ? 'border-accent-400 bg-accent-50/30' : 'border-gray-200 hover:border-gray-300'}`}>
+      <button
+        className="w-full flex items-center justify-between px-5 py-4 text-left"
+        onClick={() => setOpen(!open)}
+        aria-expanded={open}
+      >
+        <span className="font-semibold text-primary-800 text-sm pr-4">{question}</span>
+        <FiChevronDown className={`w-5 h-5 text-accent-500 flex-shrink-0 transition-transform duration-300 ${open ? 'rotate-180' : ''}`} />
+      </button>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="overflow-hidden"
+          >
+            <div className="px-5 pb-4">
+              <p className="text-primary-700 text-sm leading-relaxed">{answer}</p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
 export default function TrekDetailPage() {
   const { slug } = useParams();
   const navigate = useNavigate();
@@ -140,9 +172,9 @@ export default function TrekDetailPage() {
   if (!pkg) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center pt-24 px-4">
-        <FaMountain className="w-16 h-16 text-gray-300 mb-4" />
+        <FaMountain className="w-16 h-16 text-primary-300 mb-4" />
         <h1 className="font-heading text-2xl font-bold text-primary-800 mb-2">Package Not Found</h1>
-        <p className="text-gray-500 mb-6">The trek package you&apos;re looking for doesn&apos;t exist.</p>
+        <p className="text-primary-600 mb-6">The trek package you&apos;re looking for doesn&apos;t exist.</p>
         <Link to="/packages" className="btn-primary">View All Packages</Link>
       </div>
     );
@@ -220,7 +252,7 @@ export default function TrekDetailPage() {
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
           <div>
             <span className="text-2xl font-bold text-accent-500">{pkg.price}</span>
-            <span className="text-gray-400 text-sm ml-1">/ {pkg.priceNote}</span>
+            <span className="text-primary-600 text-sm ml-1">/ {pkg.priceNote}</span>
           </div>
           <Link to="/contact" className="btn-primary text-sm py-2 px-5">Book Now</Link>
         </div>
@@ -249,7 +281,7 @@ export default function TrekDetailPage() {
                   return (
                     <div key={info.label} className="bg-gray-50 rounded-xl p-4 text-center">
                       <Icon className="w-5 h-5 text-accent-500 mx-auto mb-2" />
-                      <div className="text-xs text-gray-400 mb-0.5">{info.label}</div>
+                      <div className="text-xs text-primary-600 mb-0.5">{info.label}</div>
                       <div className="font-semibold text-primary-800 text-sm">{info.value}</div>
                     </div>
                   );
@@ -260,7 +292,7 @@ export default function TrekDetailPage() {
               <div data-aos="fade-up">
                 <h2 className="font-heading text-2xl font-bold text-primary-800 mb-4">About This Trek</h2>
                 {pkg.longDescription.split('\n\n').map((para, idx) => (
-                  <p key={idx} className="text-gray-600 leading-relaxed mb-4">{para}</p>
+                  <p key={idx} className="text-primary-700 leading-relaxed mb-4">{para}</p>
                 ))}
               </div>
 
@@ -271,7 +303,7 @@ export default function TrekDetailPage() {
                   {pkg.highlights.map((item) => (
                     <div key={item} className="flex items-start gap-3 bg-green-50 p-3 rounded-xl">
                       <FiCheck className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700 text-sm">{item}</span>
+                      <span className="text-primary-700 text-sm">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -303,7 +335,7 @@ export default function TrekDetailPage() {
                           <div className="flex-1">
                             <h3 className="font-semibold text-primary-800 text-sm">{day.title}</h3>
                           </div>
-                          <FiChevronRight className={`w-5 h-5 text-gray-400 transition-transform duration-200 ${isOpen ? 'rotate-90' : ''}`} />
+                          <FiChevronRight className={`w-5 h-5 text-primary-500 transition-transform duration-200 ${isOpen ? 'rotate-90' : ''}`} />
                         </button>
                         <AnimatePresence>
                           {isOpen && (
@@ -315,7 +347,7 @@ export default function TrekDetailPage() {
                               className="overflow-hidden"
                             >
                               <div className="px-5 pb-4 pl-[4.5rem]">
-                                <p className="text-gray-600 text-sm leading-relaxed">{day.details}</p>
+                                <p className="text-primary-700 text-sm leading-relaxed">{day.details}</p>
                               </div>
                             </motion.div>
                           )}
@@ -355,6 +387,56 @@ export default function TrekDetailPage() {
                   </ul>
                 </div>
               </div>
+
+              {/* Best Time to Visit */}
+              {pkg.bestTimeDetails && (
+                <div data-aos="fade-up">
+                  <h2 className="font-heading text-2xl font-bold text-primary-800 mb-4 flex items-center gap-2">
+                    <FiCalendar className="w-6 h-6 text-accent-500" /> Best Time to Visit
+                  </h2>
+                  <div className="bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl p-6">
+                    <div className="inline-block bg-primary-800 text-white text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
+                      Recommended: {pkg.bestTimeDetails.season}
+                    </div>
+                    {pkg.bestTimeDetails.description.split('\\n\\n').map((para, idx) => (
+                      <p key={idx} className="text-primary-700 text-sm leading-relaxed mb-3 last:mb-0">{para}</p>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Terms & Conditions */}
+              {pkg.termsAndConditions && pkg.termsAndConditions.length > 0 && (
+                <div data-aos="fade-up">
+                  <h2 className="font-heading text-2xl font-bold text-primary-800 mb-4 flex items-center gap-2">
+                    <FiCheck className="w-6 h-6 text-accent-500" /> Terms & Conditions
+                  </h2>
+                  <div className="bg-white border border-gray-200 rounded-2xl p-6">
+                    <ul className="space-y-3">
+                      {pkg.termsAndConditions.map((term, idx) => (
+                        <li key={idx} className="flex items-start gap-3 text-primary-700 text-sm leading-relaxed">
+                          <span className="mt-1.5 w-1.5 h-1.5 bg-primary-400 rounded-full flex-shrink-0" />
+                          {term}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              )}
+
+              {/* FAQs */}
+              {pkg.faqs && pkg.faqs.length > 0 && (
+                <div data-aos="fade-up">
+                  <h2 className="font-heading text-2xl font-bold text-primary-800 mb-4 flex items-center gap-2">
+                    <FiHelpCircle className="w-6 h-6 text-accent-500" /> Frequently Asked Questions
+                  </h2>
+                  <div className="space-y-3">
+                    {pkg.faqs.map((faq, idx) => (
+                      <FaqAccordion key={idx} question={faq.question} answer={faq.answer} />
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Right Sidebar — Sticky Booking Card */}
@@ -364,9 +446,9 @@ export default function TrekDetailPage() {
                 <div className="bg-white border border-gray-200 rounded-2xl shadow-card p-6" data-aos="fade-left">
                   <div className="flex items-baseline gap-2 mb-1">
                     <span className="text-3xl font-bold text-accent-500">{pkg.price}</span>
-                    <span className="text-gray-400 text-sm">/ {pkg.priceNote}</span>
+                    <span className="text-primary-600 text-sm">/ {pkg.priceNote}</span>
                   </div>
-                  <p className="text-gray-500 text-xs mb-6">{pkg.duration} &bull; {pkg.difficulty}</p>
+                  <p className="text-primary-600 text-xs mb-6">{pkg.duration} &bull; {pkg.difficulty}</p>
 
                   <Link
                     to="/contact"
@@ -386,23 +468,23 @@ export default function TrekDetailPage() {
 
                   <div className="mt-6 pt-5 border-t border-gray-100 space-y-3 text-sm">
                     <div className="flex justify-between">
-                      <span className="text-gray-500">Duration</span>
+                      <span className="text-primary-600">Duration</span>
                       <span className="font-medium text-primary-800">{pkg.duration}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-500">Max Altitude</span>
+                      <span className="text-primary-600">Max Altitude</span>
                       <span className="font-medium text-primary-800">{pkg.altitude}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-500">Difficulty</span>
+                      <span className="text-primary-600">Difficulty</span>
                       <span className="font-medium text-primary-800">{pkg.difficulty}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-500">Group Size</span>
+                      <span className="text-primary-600">Group Size</span>
                       <span className="font-medium text-primary-800">{pkg.groupSize}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-500">Best Season</span>
+                      <span className="text-primary-600">Best Season</span>
                       <span className="font-medium text-primary-800">{pkg.bestSeason}</span>
                     </div>
                   </div>
@@ -411,7 +493,7 @@ export default function TrekDetailPage() {
                 {/* Quick Help */}
                 <div className="bg-primary-50 rounded-2xl p-5 text-center">
                   <p className="text-primary-800 font-semibold text-sm mb-2">Need help choosing?</p>
-                  <p className="text-gray-500 text-xs mb-3">Our experts will help you pick the perfect package</p>
+                  <p className="text-primary-600 text-xs mb-3">Our experts will help you pick the perfect package</p>
                   <a href="tel:+917455062107" className="text-accent-500 font-bold text-sm hover:underline">
                     Call +91-74550 62107
                   </a>
@@ -453,7 +535,7 @@ export default function TrekDetailPage() {
                   </div>
                 </div>
                 <div className="p-4">
-                  <div className="flex items-center gap-2 mb-1 text-xs text-gray-400">
+                  <div className="flex items-center gap-2 mb-1 text-xs text-primary-600">
                     <FiClock className="w-3.5 h-3.5" /> {r.duration}
                   </div>
                   <h3 className="font-heading font-bold text-primary-800 group-hover:text-accent-500 transition-colors">

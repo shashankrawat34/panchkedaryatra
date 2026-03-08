@@ -43,8 +43,8 @@ export default function BlogPage() {
               <h2 className="text-3xl md:text-4xl font-display font-bold text-primary-900 mt-2 mb-4">
                 {featured.title}
               </h2>
-              <p className="text-gray-600 leading-relaxed mb-6">{featured.excerpt}</p>
-              <div className="flex items-center gap-4 text-sm text-gray-500 mb-6">
+              <p className="text-primary-800 leading-relaxed mb-6">{featured.excerpt}</p>
+              <div className="flex items-center gap-4 text-sm text-primary-600 mb-6">
                 <span className="flex items-center gap-1"><FiCalendar /> {featured.date}</span>
                 <span className="flex items-center gap-1"><FiUser /> {featured.author}</span>
                 <span className="flex items-center gap-1"><FiClock /> {featured.readTime}</span>
@@ -87,7 +87,7 @@ export default function BlogPage() {
                   </div>
                 </Link>
                 <div className="p-6">
-                  <div className="flex items-center gap-3 text-xs text-gray-500 mb-3">
+                  <div className="flex items-center gap-3 text-xs text-primary-600 mb-3">
                     <span className="flex items-center gap-1"><FiCalendar /> {post.date}</span>
                     <span className="flex items-center gap-1"><FiClock /> {post.readTime}</span>
                   </div>
@@ -96,7 +96,7 @@ export default function BlogPage() {
                       {post.title}
                     </h3>
                   </Link>
-                  <p className="text-gray-600 text-sm leading-relaxed line-clamp-3 mb-4">{post.excerpt}</p>
+                  <p className="text-primary-700 text-sm leading-relaxed line-clamp-3 mb-4">{post.excerpt}</p>
                   <Link
                     to={`/blog/${post.slug}`}
                     className="text-sm font-medium text-primary-800 hover:text-accent-500 transition-colors inline-flex items-center gap-1"

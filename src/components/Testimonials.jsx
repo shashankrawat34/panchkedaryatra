@@ -87,7 +87,7 @@ export default function Testimonials() {
           <h2 className="font-heading text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-white mb-4 leading-tight">
             What Our <span className="text-accent-400">Pilgrims</span> Say
           </h2>
-          <p className="text-white/60 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-white/80 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
             Thousands of satisfied pilgrims and trekkers trust us with their sacred journey.
           </p>
         </div>

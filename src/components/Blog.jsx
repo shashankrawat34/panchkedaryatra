@@ -59,7 +59,7 @@ export default function Blog() {
                 </div>
               </Link>
               <div className="p-5">
-                <div className="flex items-center gap-1.5 text-xs text-gray-400 mb-2">
+                <div className="flex items-center gap-1.5 text-xs text-primary-600 mb-2">
                   <FiCalendar className="w-3.5 h-3.5" />
                   {post.date}
                 </div>
@@ -68,7 +68,7 @@ export default function Blog() {
                     {post.title}
                   </h3>
                 </Link>
-                <p className="text-gray-500 text-xs leading-relaxed mb-4 line-clamp-3">
+                <p className="text-primary-700 text-xs leading-relaxed mb-4 line-clamp-3">
                   {post.excerpt}
                 </p>
                 <Link to={`/blog/${post.slug}`} className="flex items-center gap-1.5 text-primary-800 hover:text-accent-500 text-sm font-semibold transition-colors duration-300" aria-label={`Read full article: ${post.title}`}>

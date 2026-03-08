@@ -47,12 +47,12 @@ const features = [
 ];
 
 const milestones = [
-  { year: '2004', text: 'Founded in Uttarakhand with a mission to provide safe pilgrimage services' },
-  { year: '2008', text: 'Completed first full Panch Kedar Circuit expedition with 12 pilgrims' },
-  { year: '2012', text: 'Expanded to 50+ annual group departures across all five Kedar routes' },
-  { year: '2015', text: 'Received Uttarakhand Tourism Excellence Award for responsible tourism' },
-  { year: '2020', text: 'Launched eco-friendly camping initiative — zero single-use plastic on all treks' },
+  { year: '2018', text: 'Founded in Uttarakhand with a mission to provide safe, authentic Panch Kedar pilgrimage services' },
+  { year: '2019', text: 'Completed first full Panch Kedar Circuit expedition and expanded to all five Kedar routes' },
+  { year: '2021', text: 'Launched eco-friendly camping initiative — zero single-use plastic on all treks' },
+  { year: '2023', text: 'Expanded to 50+ annual group departures with certified mountaineering guides' },
   { year: '2024', text: 'Crossed 5,000+ happy pilgrims with industry-leading 4.9-star average rating' },
+  { year: '2026', text: 'Serving 8+ years of safe, memorable Himalayan pilgrimages across the Garhwal Himalayas' },
 ];
 
 export default function AboutPage() {
@@ -60,13 +60,13 @@ export default function AboutPage() {
     <>
       <SEO
         title="About Us"
-        description="Learn about Panch Kedar Yatra – 8+ years of organizing safe, eco-friendly pilgrimages to all five sacred Kedar shrines in the Garhwal Himalayas, Uttarakhand."
+        description="Learn about Panch Kedar Yatra – serving since 2018 with 8+ years of organizing safe, eco-friendly pilgrimages to all five sacred Kedar shrines in the Garhwal Himalayas, Uttarakhand."
         canonical="/about"
         image="/images/tungnath/tungnath-1.webp"
       />
       <PageBanner
         title="About Us"
-        subtitle="Your trusted partner for Panch Kedar pilgrimage since 2004"
+        subtitle="Your trusted partner for Panch Kedar pilgrimage since 2018"
         breadcrumbs={[{ label: 'About Us' }]}
         bgImage="/images/tungnath/tungnath-1.jpg"
       />
@@ -91,7 +91,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <div className="font-heading font-bold text-primary-800 text-lg">Sacred Kedars</div>
-                    <div className="text-gray-500 text-sm">Since 2004</div>
+                    <div className="text-primary-600 text-sm">Since 2018</div>
                   </div>
                 </div>
               </div>
@@ -106,20 +106,20 @@ export default function AboutPage() {
                 Your Trusted Partner for{' '}
                 <span className="text-accent-500">Panch Kedar</span> Pilgrimage
               </h2>
-              <p className="text-gray-600 leading-relaxed mb-6">
+              <p className="text-primary-800 leading-relaxed mb-6">
                 The Panch Kedar Yatra is one of the most revered pilgrimages in Hinduism,
                 tracing the path of the Pandavas who sought Lord Shiva's blessings across five
                 ancient temples nestled high in the Garhwal Himalayas of Uttarakhand. Each temple
                 holds a unique part of Lord Shiva's divine form, making this journey a profound
                 spiritual odyssey.
               </p>
-              <p className="text-gray-600 leading-relaxed mb-6">
+              <p className="text-primary-800 leading-relaxed mb-6">
                 At Panch Kedar Yatra, we have been guiding pilgrims and adventure seekers through
                 these sacred routes for over 8 years. Our team of certified mountaineering guides,
                 comfortable camping arrangements, nutritious meals, and comprehensive logistics
                 ensure your yatra is safe, memorable, and deeply fulfilling.
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-primary-800 leading-relaxed">
                 We are committed to eco-friendly tourism and community-driven travel that respects
                 these pristine landscapes. Every trek supports local communities through employment,
                 homestays, and cultural exchange — because we believe responsible tourism and authentic
@@ -155,7 +155,7 @@ export default function AboutPage() {
                     <Icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="font-heading font-semibold text-primary-800 text-base mb-2">{f.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{f.description}</p>
+                  <p className="text-primary-700 text-sm leading-relaxed">{f.description}</p>
                 </div>
               );
             })}
@@ -193,7 +193,7 @@ export default function AboutPage() {
                 {/* Content */}
                 <div className={`ml-12 md:ml-0 md:w-[calc(50%-2rem)] ${idx % 2 === 0 ? 'md:text-right md:pr-8' : 'md:text-left md:pl-8'}`}>
                   <span className="text-accent-500 font-bold text-lg font-heading">{m.year}</span>
-                  <p className="text-gray-600 text-sm leading-relaxed mt-1">{m.text}</p>
+                  <p className="text-primary-800 text-sm leading-relaxed mt-1">{m.text}</p>
                 </div>
               </div>
             ))}

@@ -64,7 +64,7 @@ export default function Navbar() {
               </span>
               <span
                 className={`text-[0.5rem] font-medium tracking-wider transition-colors duration-300 ${
-                  scrolled ? 'text-gray-500' : 'text-white/70'
+                  scrolled ? 'text-primary-600' : 'text-white/70'
                 }`}
               >
                 by Garhwal Hikes
@@ -82,7 +82,7 @@ export default function Navbar() {
                   to={link.to}
                   className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-white/10 ${
                     scrolled
-                      ? `hover:text-primary-800 hover:bg-primary-50 ${isActive ? 'text-primary-800 bg-primary-50' : 'text-gray-700'}`
+                      ? `hover:text-primary-800 hover:bg-primary-50 ${isActive ? 'text-primary-800 bg-primary-50' : 'text-primary-700'}`
                       : `hover:text-white ${isActive ? 'text-white bg-white/10' : 'text-white/90'}`
                   }`}
                 >
@@ -157,7 +157,7 @@ export default function Navbar() {
                     className={`block px-4 py-3 rounded-lg font-medium transition-colors ${
                       location.pathname === link.to
                         ? 'text-primary-800 bg-primary-50'
-                        : 'text-gray-700 hover:text-primary-800 hover:bg-primary-50'
+                        : 'text-primary-700 hover:text-primary-800 hover:bg-primary-50'
                     }`}
                   >
                     {link.name}

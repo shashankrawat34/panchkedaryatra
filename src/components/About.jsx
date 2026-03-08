@@ -54,7 +54,7 @@ export default function About() {
                 </div>
                 <div>
                   <div className="font-heading font-bold text-primary-800 text-lg">Sacred Kedars</div>
-                  <div className="text-gray-500 text-sm">Since 2004</div>
+                  <div className="text-primary-600 text-sm">Since 2018</div>
                 </div>
               </div>
             </div>
@@ -69,14 +69,14 @@ export default function About() {
               Your Trusted Partner for{' '}
               <span className="text-accent-500">Panch Kedar</span> Pilgrimage
             </h2>
-            <p className="text-gray-600 leading-relaxed mb-6">
+            <p className="text-primary-800 leading-relaxed mb-6">
               The Panch Kedar Yatra is one of the most revered pilgrimages in Hinduism, 
               tracing the path of the Pandavas who sought Lord Shiva's blessings across five 
               ancient temples nestled high in the Garhwal Himalayas of Uttarakhand. Each temple 
               holds a unique part of Lord Shiva's divine form, making this journey a profound 
               spiritual odyssey.
             </p>
-            <p className="text-gray-600 leading-relaxed mb-8">
+            <p className="text-primary-800 leading-relaxed mb-8">
               At Panch Kedar Yatra, we have been guiding pilgrims and adventure seekers through 
               these sacred routes for over 8 years. Our team of certified mountaineering guides, 
               comfortable camping arrangements, nutritious meals, and comprehensive logistics 
@@ -102,7 +102,7 @@ export default function About() {
                       <h3 className="font-heading font-semibold text-primary-800 text-sm mb-1">
                         {feature.title}
                       </h3>
-                      <p className="text-gray-500 text-xs leading-relaxed">
+                      <p className="text-primary-700 text-xs leading-relaxed">
                         {feature.description}
                       </p>
                     </div>

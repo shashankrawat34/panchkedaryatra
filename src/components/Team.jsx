@@ -91,7 +91,7 @@ export default function Team() {
                   {member.name}
                 </h3>
                 <p className="text-accent-500 font-medium text-sm mb-3">{member.role}</p>
-                <p className="text-gray-500 text-xs leading-relaxed mb-3">{member.bio}</p>
+                <p className="text-primary-700 text-xs leading-relaxed mb-3">{member.bio}</p>
                 <span className="inline-flex items-center gap-1.5 text-xs bg-primary-50 text-primary-800 px-3 py-1 rounded-full">
                   <FiAward className="w-3.5 h-3.5" />
                   {member.certifications}

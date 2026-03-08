@@ -14,8 +14,8 @@ export default function BlogDetailPage() {
     return (
       <div className="min-h-[70vh] flex flex-col items-center justify-center px-4 text-center pt-24">
         <h1 className="font-heading text-6xl md:text-8xl font-bold text-primary-800 mb-4">404</h1>
-        <p className="text-xl md:text-2xl text-gray-600 mb-2">Article Not Found</p>
-        <p className="text-gray-400 mb-8 max-w-md">
+        <p className="text-xl md:text-2xl text-primary-700 mb-2">Article Not Found</p>
+        <p className="text-primary-600 mb-8 max-w-md">
           The blog post you&apos;re looking for doesn&apos;t exist or has been moved.
         </p>
         <Link to="/blog" className="btn-primary">Back to Blog</Link>
@@ -34,7 +34,7 @@ export default function BlogDetailPage() {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.title,
-    description: post.excerpt.substring(0, 160),
+    description: post.metaDescription || post.excerpt.substring(0, 160),
     image: `https://panchkedaryatra.in${post.image}`,
     datePublished: new Date(post.date).toISOString(),
     author: {
@@ -52,14 +52,14 @@ export default function BlogDetailPage() {
     },
   };
 
-  // Split excerpt into paragraphs for readable rendering
-  const paragraphs = post.excerpt.split('\n\n').filter(Boolean);
+  // Split content (or excerpt fallback) into paragraphs for readable rendering
+  const paragraphs = (post.content || post.excerpt).split('\n\n').filter(Boolean);
 
   return (
     <>
       <SEO
         title={post.title}
-        description={post.excerpt.substring(0, 155) + '...'}
+        description={post.metaDescription || post.excerpt.substring(0, 155) + '...'}
         canonical={`/blog/${post.slug}`}
         image={post.image}
         type="article"
@@ -79,7 +79,7 @@ export default function BlogDetailPage() {
       <article className="section-padding bg-white">
         <div className="max-w-3xl mx-auto">
           {/* Meta bar */}
-          <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-8 pb-6 border-b border-gray-100">
+          <div className="flex flex-wrap items-center gap-4 text-sm text-primary-600 mb-8 pb-6 border-b border-gray-100">
             <span className="bg-accent-500 text-white text-xs font-bold px-3 py-1 rounded-full">
               {post.category}
             </span>
@@ -98,8 +98,23 @@ export default function BlogDetailPage() {
           </div>
 
           {/* Content */}
-          <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+          <div className="prose prose-lg max-w-none text-primary-800 leading-relaxed">
             {paragraphs.map((para, i) => {
+              // Handle markdown-style headings
+              if (para.startsWith('### ')) {
+                return (
+                  <h3 key={i} className="text-xl md:text-2xl font-display font-bold text-primary-900 mt-8 mb-3">
+                    {para.replace('### ', '')}
+                  </h3>
+                );
+              }
+              if (para.startsWith('## ')) {
+                return (
+                  <h2 key={i} className="text-2xl md:text-3xl font-display font-bold text-primary-900 mt-10 mb-4">
+                    {para.replace('## ', '')}
+                  </h2>
+                );
+              }
               // Handle markdown-style bold (**text**) for the packing checklist post
               const parts = para.split(/\*\*(.*?)\*\*/g);
               return (
@@ -121,7 +136,7 @@ export default function BlogDetailPage() {
             <h3 className="font-heading text-2xl font-bold text-primary-900 mb-3">
               Ready to Experience This Journey?
             </h3>
-            <p className="text-gray-600 mb-6 max-w-lg mx-auto">
+            <p className="text-primary-700 mb-6 max-w-lg mx-auto">
               Our expert team is ready to plan your perfect Panch Kedar adventure. Get in touch today for a customised itinerary.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -166,7 +181,7 @@ export default function BlogDetailPage() {
                     </div>
                   </div>
                   <div className="p-5">
-                    <div className="flex items-center gap-3 text-xs text-gray-500 mb-2">
+                    <div className="flex items-center gap-3 text-xs text-primary-600 mb-2">
                       <span className="flex items-center gap-1"><FiCalendar /> {relPost.date}</span>
                       <span className="flex items-center gap-1"><FiClock /> {relPost.readTime}</span>
                     </div>
